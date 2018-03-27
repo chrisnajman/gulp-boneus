@@ -88,6 +88,7 @@ The first line looks for new images to process (minify).
 The second caches existing minified images. This means that the minification process won't be repeated on already minified images.
 
 5) CSS settings
+
 No CSS folder is generated or exists in 'dev-boneus', only the 'scss' folder.
 
 No SCSS folder is generated in 'boneus', only the CSS folder.
@@ -111,7 +112,7 @@ To take advantage of 'deporder' you would have to type, at the very top of `scri
 
 `// requires: functions.js`
 
-This will print the code in `functions.js` before the code in `scripts.js` in the concatenated file which is outputted to `bones/library/js`, i.e in the correct order.
+This will print the code in `functions.js` before the code in `scripts.js` in the concatenated file which is outputted to `bones/library/js`.
 
 If you decided to put functions.php in a sub-folder of dev-bones/library/ e.g. utilities/ then you would reference it as follows:
 
@@ -131,11 +132,13 @@ Copy static files without processing them in any way.
 9) Clear cache task
 
 10) Build task
+
 Every time this task is run ('gulp build') in the command prompt the 'boneus' folder is rebuilt based on the contents of 'dev-boneus'.
 
 11) Browsersync
 
 12) Watch task
+
 Every time this task is run ('gulp watch') in the command prompt a browser window will be launched loading the remote Wordpress installation and watching for changes to all files in 'dev-boneus'. Any changes will simultaneously be made in 'boneus' and the browser  updated with those changes.
 
 Additionally, any file deleted in 'dev-boneus' will also be deleted in 'boneus'.
