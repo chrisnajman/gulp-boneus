@@ -80,8 +80,9 @@ Once this is done, download the files to a new project folder on your machine, l
 
 4) Image settings
 
-    .pipe(newer(images.build))
-    .pipe(cache(imagemin()))
+`.pipe(newer(images.build))`
+
+`.pipe(cache(imagemin()))`
     
 The first line looks for new images to process (minify).
 The second caches existing minified images. This means that the minification process won't be repeated on already minified images.
@@ -93,7 +94,7 @@ No SCSS folder is generated in 'boneus', only the CSS folder.
 
 6) Javascript settings
 
-    .pipe(deporder())
+`.pipe(deporder())`
     
 The 'deporder' plugin is not actually in use, but it can be. The name is short for 'dependencies order'. A use case would be if you had separate .js files in dev-boneus/library/js/ e.g. 
 
@@ -102,7 +103,7 @@ The 'deporder' plugin is not actually in use, but it can be. The name is short f
 
 In this example, `scripts.js` requires `functions.js` in order to work properly.
 
-    .pipe(concat(js.filename))
+`.pipe(concat(js.filename))`
 
 will concatenate both files but not necessarily in the correct order and the functionality might not work.
 
@@ -141,6 +142,7 @@ Additionally, any file deleted in 'dev-boneus' will also be deleted in 'boneus'.
 
 13) Default task
 
+This combines the 'build' and 'watch' tasks. To run it, type 'gulp' in the command prompt.
 
 
 ## Finally
