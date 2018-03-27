@@ -72,13 +72,13 @@ Once this is done, download the files to a new project folder on your machine, l
 #### `gulpfile.js`
 `gulpfile.js` is broken up into numbered sections (1-13). They are all annotated. I've provided a few additional notes below where I think further explanation is required: 
 
-#####1) Configuration
+1) Configuration
 
 2) Setup
 
 3) PHP settings
 
-#####4) Image settings
+4) Image settings
 
 `.pipe(newer(images.build))`
 
