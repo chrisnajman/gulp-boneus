@@ -20,6 +20,10 @@ const
   sass          = require('gulp-sass'),
   sourcemaps    = require('gulp-sourcemaps'),
   postcss       = require('gulp-postcss'),
+  autoprefixer       = require('autoprefixer'),
+  cssnano       = require('cssnano'), 
+  cssmqpacker   = require('css-mqpacker'),
+  browser_sync   = require('browser-sync'),
   deporder      = require('gulp-deporder'),
   concat        = require('gulp-concat'),
   stripdebug    = require('gulp-strip-debug'),
@@ -61,7 +65,6 @@ const images = {
 gulp.task('images', () => {
   return gulp.src(images.src)
     .pipe(newer(images.build))
-    // Caching images that ran through imagemin
     .pipe(cache(imagemin()))
     .pipe(gulp.dest(images.build));
 });
@@ -79,12 +82,13 @@ const css = {
   },
 
   processors: [
-    require('autoprefixer')({
+    autoprefixer({
       browsers: ['last 2 versions', '> 2%']
     }),
-    require('css-mqpacker'),
-    require('cssnano')
+    cssmqpacker,
+    cssnano
   ]
+
 };
 
 gulp.task('css', () => {
@@ -246,7 +250,8 @@ const syncOpts = {
 // browser-sync task ()
 gulp.task('browsersync', () => {
   if (browsersync === false) {
-    browsersync = require('browser-sync').create();
+    // browsersync = require('browser-sync').create();
+    browsersync = browser_sync.create();
     browsersync.init(syncOpts);
   }
 });
@@ -254,8 +259,6 @@ gulp.task('browsersync', () => {
 /*******************************************************/
 
 // 12) Watch for file changes (command: watch)
-// If delete file from app to dist works have to include watch for copy tasks here as well
-// Doesn't notice if _test.scss is - of course - it doesn't export any scss only css! 
 gulp.task('watch', ['browsersync'], () => {
 
   // page changes
