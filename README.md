@@ -97,7 +97,7 @@ Once this is done, download the files to a new project folder on your machine, l
 
    `.pipe(deporder())`
     
-   The 'deporder' plugin is not actually in use, but it can be. The name is short for 'dependencies order'. A use case would be if you had separate .js files in dev-boneus/library/js/ e.g. 
+   The 'deporder' plugin is not actually in use, but it can be. The name is short for 'dependencies order'. A use case would be if you had separate `.js` files in `dev-boneus/library/js/` e.g. 
 
    * `functions.js`
    * `scripts.js`
@@ -133,19 +133,19 @@ Once this is done, download the files to a new project folder on your machine, l
 
 10) Build task
 
-   Every time this task is run ('gulp build') in the command prompt the 'boneus' folder is rebuilt based on the contents of 'dev-boneus'.
+    Every time this task is run ('gulp build') in the command prompt the 'boneus' folder is rebuilt based on the contents of 'dev-boneus'.
 
 11) Browsersync
 
 12) Watch task
 
-   Every time this task is run ('gulp watch') in the command prompt a browser window will be launched loading the remote Wordpress installation and watching for changes to all files in 'dev-boneus'. Any changes will simultaneously be made in 'boneus' and the browser  updated with those changes.
+    Every time this task is run ('gulp watch') in the command prompt a browser window will be launched loading the remote Wordpress installation and watching for changes to all files in 'dev-boneus'. Any changes will simultaneously be made in 'boneus' and the browser  updated with those changes.
 
-   Additionally, any file deleted in 'dev-boneus' will also be deleted in 'boneus'.
+    Additionally, any file deleted in 'dev-boneus' will also be deleted in 'boneus'.
 
 13) Default task
 
-   This combines the 'build' and 'watch' tasks. To run it, type 'gulp' in the command prompt.
+    This combines the 'build' and 'watch' tasks. To run it, type 'gulp' in the command prompt.
 
 
 ## Finally
