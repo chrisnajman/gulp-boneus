@@ -80,51 +80,51 @@ Once this is done, download the files to a new project folder on your machine, l
 
 4) Image settings
 
-`.pipe(newer(images.build))`
+   `.pipe(newer(images.build))`
 
-`.pipe(cache(imagemin()))`
+   `.pipe(cache(imagemin()))`
     
-The first line looks for new images to process (minify).
-The second caches existing minified images. This means that the minification process won't be repeated on already minified images.
+   The first line looks for new images to process (minify).
+   The second caches existing minified images. This means that the minification process won't be repeated on already minified images.
 
 5) CSS settings
 
-No CSS folder is generated or exists in 'dev-boneus', only the 'scss' folder.
+   No CSS folder is generated or exists in 'dev-boneus', only the 'scss' folder.
 
-No SCSS folder is generated in 'boneus', only the CSS folder.
+   No SCSS folder is generated in 'boneus', only the CSS folder.
 
 6) Javascript settings
 
-`.pipe(deporder())`
+   `.pipe(deporder())`
     
-The 'deporder' plugin is not actually in use, but it can be. The name is short for 'dependencies order'. A use case would be if you had separate .js files in dev-boneus/library/js/ e.g. 
+   The 'deporder' plugin is not actually in use, but it can be. The name is short for 'dependencies order'. A use case would be if you had separate .js files in dev-boneus/library/js/ e.g. 
 
-* `functions.js`
-* `scripts.js`
+   * `functions.js`
+   * `scripts.js`
 
-In this example, `scripts.js` requires `functions.js` in order to work properly.
+   In this example, `scripts.js` requires `functions.js` in order to work properly.
 
-`.pipe(concat(js.filename))`
+   `.pipe(concat(js.filename))`
 
-will concatenate both files but not necessarily in the correct order and the functionality might not work.
+   will concatenate both files but not necessarily in the correct order and the functionality might not work.
 
-To take advantage of 'deporder' you would have to type, at the very top of `scripts.js` the following:
+   To take advantage of 'deporder' you would have to type, at the very top of `scripts.js` the following:
 
-`// requires: functions.js`
+   `// requires: functions.js`
 
-This will print the code in `functions.js` before the code in `scripts.js` in the concatenated file which is outputted to `bones/library/js`.
+   This will print the code in `functions.js` before the code in `scripts.js` in the concatenated file which is outputted to `bones/library/js`.
 
-If you decided to put functions.php in a sub-folder of dev-bones/library/ e.g. utilities/ then you would reference it as follows:
+   If you decided to put functions.php in a sub-folder of dev-bones/library/ e.g. utilities/ then you would reference it as follows:
 
-`// requires: utilities\functions.js`
+   `// requires: utilities\functions.js`
 
-Note the backslash ('\') in the filepath: this is for **Windows only**. The [documentation](https://www.npmjs.com/package/gulp-deporder) gives the filepath using the forward slash ('/') which I imagine is suitable for Linux (and maybe Mac). If one doesn't work, try the other one.
+   Note the backslash ('\') in the filepath: this is for **Windows only**. The [documentation](https://www.npmjs.com/package/gulp-deporder) gives the filepath using the forward slash ('/') which I imagine is suitable for Linux (and maybe Mac). If one doesn't work, try the other one.
 
-*Note: it doesn't matter what you call the files in* `dev-boneus/library/js` *- they will all be concatenated and minified into* `boneus/library/js/scripts.js`*.*
+   *Note: it doesn't matter what you call the files in* `dev-boneus/library/js` *- they will all be concatenated and minified into* `boneus/library/js/scripts.js`*.*
 
 7) Copy tasks
 
-Copy static files without processing them in any way.
+   Copy static files without processing them in any way.
 
 
 8) Delete task
@@ -133,19 +133,19 @@ Copy static files without processing them in any way.
 
 10) Build task
 
-Every time this task is run ('gulp build') in the command prompt the 'boneus' folder is rebuilt based on the contents of 'dev-boneus'.
+   Every time this task is run ('gulp build') in the command prompt the 'boneus' folder is rebuilt based on the contents of 'dev-boneus'.
 
 11) Browsersync
 
 12) Watch task
 
-Every time this task is run ('gulp watch') in the command prompt a browser window will be launched loading the remote Wordpress installation and watching for changes to all files in 'dev-boneus'. Any changes will simultaneously be made in 'boneus' and the browser  updated with those changes.
+   Every time this task is run ('gulp watch') in the command prompt a browser window will be launched loading the remote Wordpress installation and watching for changes to all files in 'dev-boneus'. Any changes will simultaneously be made in 'boneus' and the browser  updated with those changes.
 
-Additionally, any file deleted in 'dev-boneus' will also be deleted in 'boneus'.
+   Additionally, any file deleted in 'dev-boneus' will also be deleted in 'boneus'.
 
 13) Default task
 
-This combines the 'build' and 'watch' tasks. To run it, type 'gulp' in the command prompt.
+   This combines the 'build' and 'watch' tasks. To run it, type 'gulp' in the command prompt.
 
 
 ## Finally
