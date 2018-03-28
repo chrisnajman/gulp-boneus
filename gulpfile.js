@@ -223,7 +223,7 @@ gulp.task('build', function (callback) {
 
 /*******************************************************/
 
-// 11) Browsersync (command: browsersync)
+// 11) Browsersync (command: gulp browsersync)
 const syncOpts = {
   proxy       : 'http://localhost/sites/wordpress-sites/wp-gulp-1/',
   files       : dir.build + '**/*',
@@ -258,7 +258,7 @@ gulp.task('browsersync', () => {
 
 /*******************************************************/
 
-// 12) Watch for file changes (command: watch)
+// 12) Watch for file changes (command: gulp watch)
 gulp.task('watch', ['browsersync'], () => {
 
   // page changes
@@ -366,8 +366,9 @@ gulp.task('watch', ['browsersync'], () => {
   });
 });
 
-// 13) default task - combine build and watch (command: gulp)
+/*******************************************************/
 
+// 13) default task - combine build and watch (command: gulp)
 gulp.task('default', function (callback) {
   runSequence('build', ['watch'], callback)
 });
