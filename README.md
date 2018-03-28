@@ -89,7 +89,7 @@ Once this is done, download the files to a new project folder on your machine, l
 
 5) CSS settings
 
-   No CSS folder is generated or exists in 'dev-boneus', only the 'scss' folder.
+   No CSS folder is generated or exists in 'dev-boneus', only the SCSS folder.
 
    No SCSS folder is generated in 'boneus', only the CSS folder.
 
@@ -97,7 +97,7 @@ Once this is done, download the files to a new project folder on your machine, l
 
    `.pipe(deporder())`
     
-   The 'deporder' plugin is not actually in use, but it can be. The name is short for 'dependencies order'. A use case would be if you had separate `.js` files in `dev-boneus/library/js/` e.g. 
+   The 'deporder' plugin is not actually in use, but it can be. The name is short for 'dependencies order'. A use-case would be if you had separate `.js` files in `dev-boneus/library/js/` e.g. 
 
    * `functions.js`
    * `scripts.js`
