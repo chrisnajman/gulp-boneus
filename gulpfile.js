@@ -9,7 +9,7 @@ const
   // Source and build folders
   dir = {
     src         : 'dev-boneus/',
-    build       : 'C:/xampp/htdocs/sites/wordpress-sites/wp-gulp-1/wp-content/themes/boneus/'
+    build       : 'C:/xampp/htdocs/sites/[YOUR-SITE-NAME]/wp-content/themes/boneus/'
   },
 
   // Gulp and plugins
@@ -20,10 +20,10 @@ const
   sass          = require('gulp-sass'),
   sourcemaps    = require('gulp-sourcemaps'),
   postcss       = require('gulp-postcss'),
-  autoprefixer       = require('autoprefixer'),
+  autoprefixer  = require('autoprefixer'),
   cssnano       = require('cssnano'), 
   cssmqpacker   = require('css-mqpacker'),
-  browser_sync   = require('browser-sync'),
+  browser_sync  = require('browser-sync'),
   deporder      = require('gulp-deporder'),
   concat        = require('gulp-concat'),
   stripdebug    = require('gulp-strip-debug'),
@@ -225,7 +225,7 @@ gulp.task('build', function (callback) {
 
 // 11) Browsersync (command: gulp browsersync)
 const syncOpts = {
-  proxy       : 'http://localhost/sites/wordpress-sites/wp-gulp-1/',
+  proxy       : 'http://localhost/sites/[YOUR-SITE-NAME]/',
   files       : dir.build + '**/*',
   open        : 'local',
   /*
