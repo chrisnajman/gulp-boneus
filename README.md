@@ -18,7 +18,7 @@ More specifically, I want to be able to:
 
 The theme I've chosen is 'Bones' (because all my sites are based on it. True, I usually take it apart, gut it, and replace a large part of it with my own code, but it's a great place to start).
 
-##Differences between Boneus and Bones
+## Differences between Boneus and Bones
 The Boneus theme differs slightly from Bones (which is why I renamed it).
 
 These differences are:
