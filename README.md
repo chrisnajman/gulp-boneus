@@ -30,7 +30,7 @@ These differences are:
 
 
 ## Assumptions
-* You know something about Wordpress Theme Development (e.g. the function of `/style.cs`s in establishing a theme, how to activate the theme in Wordpress admin),
+* You know something about Wordpress Theme Development (e.g. the function of `/style.css` in establishing a theme, how to activate the theme in Wordpress admin),
 * You've got Wordpress installed on a local web server e.g. Xammp,
 * You know something about SCSS/SASS,
 * You know how to use the command line.
@@ -147,6 +147,14 @@ Once this is done, download the files to a new project folder on your machine, l
 
     This combines the 'build' and 'watch' tasks. To run it, type 'gulp' in the command prompt.
 
+
+## Renaming the theme
+
+If you want to rename 'boneus' to e.g. 'yourthemename':
+
+* in 'dev-boneus' change the theme name at the top of `/style.css`,
+* change every reference to 'boneus' to e.g. 'yourthemename' in  `gulpfilejs`,
+* enable the theme in Wordpress admin `Appearance/Themes`.
 
 ## Finally
 The `node_modules` folder takes up a lot of space on the hard drive. For this modest project it weighs in at size: 153.1mb / size on disk: 224mb.
