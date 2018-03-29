@@ -154,7 +154,7 @@ If you want to rename 'boneus' to e.g. 'yourthemename':
 
 * in 'dev-boneus' change the theme name at the top of `/style.css`,
 * change every reference to 'boneus' to e.g. 'yourthemename' in  `gulpfilejs`,
-* enable the theme in Wordpress admin `Appearance/Themes`.
+* enable e.g. 'yourthemename' in Wordpress admin `Appearance/Themes`.
 
 ## Finally
 The `node_modules` folder takes up a lot of space on the hard drive. For this modest project it weighs in at size: 153.1mb / size on disk: 224mb.
