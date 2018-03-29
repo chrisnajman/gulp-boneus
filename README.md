@@ -118,7 +118,7 @@ Once this is done, download the files to a new project folder on your machine, l
 
    `// requires: utilities\functions.js`
 
-   Note the backslash ('\') in the filepath: this is for **Windows only**. The [documentation](https://www.npmjs.com/package/gulp-deporder) gives the filepath using the forward slash ('/') which I imagine is suitable for Linux (and maybe Mac). If one doesn't work, try the other one.
+   Note the backslash (\) in the filepath: this is for **Windows only**. The [documentation](https://www.npmjs.com/package/gulp-deporder) gives the filepath using the forward slash (/) which I imagine is suitable for Linux (and maybe Mac). If one doesn't work, try the other one.
 
    *Note: it doesn't matter what you call the files in* `dev-boneus/library/js` *- they will all be concatenated and minified into* `boneus/library/js/scripts.js`*.*
 
